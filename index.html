@@ -7,7 +7,7 @@
         <meta name="author" content="Barry Jones"/>
         <title>BarryJones.org</title>
         
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/cover/"/>
+        <link href="style.css" rel="stylesheet"/>
         
         <!-- Bootstrap core CSS -->
         <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
@@ -23,49 +23,69 @@
         
         
         <style>
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
+            main {
+                transform: translateY(50%);
             }
-        
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
+            
+            @media (prefers-color-scheme: light) {
+                body {
+                    background-color: white;
+                    color: black;
+                }
+                
+                tbody tr:nth-child(odd) {
+                    background-color: rgba(0,0,0,0.08);
+                }
+                
+                a.active, a:hover {
+                    color: black;
+                }
+                
+                th, td {
+                    border: 1px solid black;
+                }
+
             }
-        }
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background-color: black;
+                    color: white;
+                }
+                
+                tbody tr:nth-child(odd) {
+                    background-color: rgba(255,255,255,0.08);
+                }
+                
+                a.active, a:hover {
+                    color: white;
+                }
+                
+                th, td {
+                    border: 1px solid white;
+                }
+            }
+
         </style>
         <!-- Custom styles for this template -->
-        <link href="https://getbootstrap.com/docs/4.4/examples/cover/cover.css" rel="stylesheet"/>
     </head>
     <body class="text-center">
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <header class="masthead mb-auto">
-                <div class="inner">
-                    <h3 class="masthead-brand">Barry Jones</h3>
-                    <nav class="nav nav-masthead justify-content-center">
-                        <a class="nav-link active" href="#">Home</a>
-                        <a class="nav-link" href="/projects">Projects</a>
-                        <a class="nav-link" href="/contact">Contact</a>
-                    </nav>
-                </div>
-            </header>
+        <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">Barry Jones</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </nav>
             
-            <main role="main" class="inner cover">
-                <h1 class="cover-heading">Learn about me.</h1>
-                <p class="lead">I'm a software engineer with an interest in problem solving.</p>
-                <p class="lead">
-                </p>
+            <main>
+                <h1 class="cover-heading">Contact Me</h1>
+                <p class="lead"><a href="mailto:contact@barryjones.org">Email</a>  |  <a href="https://twitter.com/barrymjones">Twitter</a></p>
+                <p class="lead"><a href="https://github.com/bjo0">Github</a>  |  <a href="https://stackoverflow.com/users/4943322/barry-jones">Stack Overflow</a></p>
+                <p class="lead"><a href="https://www.tinkercad.com/users/5MgVCo6Ktga-bjo">Tinkercard</a>  |  <a href="https://www.thingiverse.com/barrymjones/about">Thingiverse</a></p>
             </main>
             
-            <footer class="mastfoot mt-auto">
-                <div class="inner">
-                    
-                </div>
-            </footer>
         </div>
     </body>
 </html>
