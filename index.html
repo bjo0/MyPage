@@ -24,7 +24,11 @@
         
         <style>
             main {
-                transform: translateY(50%);
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
             }
             
             @media (prefers-color-scheme: light) {
@@ -79,7 +83,7 @@
                 </ul>
             </nav>
             
-            <main>
+            <main class="container">
                 <h1 class="cover-heading">Contact Me</h1>
                 <p class="lead"><a href="mailto:contact@barryjones.org">Email</a>  |  <a href="https://twitter.com/barrymjones">Twitter</a></p>
                 <p class="lead"><a href="https://github.com/bjo0">Github</a>  |  <a href="https://stackoverflow.com/users/4943322/barry-jones">Stack Overflow</a></p>
